@@ -1,83 +1,77 @@
-# CSV Analyzer
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSV Analyzer</title>
+</head>
+<body>
 
-CSV Analyzer is a C program designed to read and analyze CSV files containing athlete performance data. The program calculates the average performance metrics for various events and outputs the results to a new CSV file.
-**This program is being used by Coach Gabi Silverman and David Baron from Makabi Marom Ramat Gan Swimming Club. David Baron is training Jonathan Itzhaki, the Israeli champion in 100 breaststroke, with this program.**
-**Please note that this program is not final and is subject to change and implementation of new features.**
+  <h1>CSV Analyzer</h1>
 
+  <p>CSV Analyzer is a C program designed to read and analyze CSV files containing athlete performance data. The program calculates the average performance metrics for various events and outputs the results to a new CSV file.</p>
+  <p><strong>This program is being used by Coach Gabi Silverman and David Baron from Makabi Marom Ramat Gan Swimming Club. David Baron is training Jonathan Itzhaki, the Israeli champion in 100 breaststroke, with this program.</strong></p>
+  <p><strong>Please note that this program is not final and is subject to change and implementation of new features.</strong></p>
 
-## Features
+  <h2>Features</h2>
+  <ul>
+    <li>Reads CSV files with athlete performance data.</li>
+    <li>Calculates average times for:
+      <ul>
+        <li>50m Freestyle</li>
+        <li>50m Best Stroke</li>
+        <li>100m Freestyle</li>
+        <li>100m Best Stroke</li>
+      </ul>
+    </li>
+    <li>Calculates average metrics for:
+      <ul>
+        <li>Crossfit Max Sets</li>
+        <li>Max Pushups in 60 Seconds</li>
+        <li>Run "Botke"</li>
+        <li>Test 12</li>
+      </ul>
+    </li>
+    <li>Outputs the calculated averages to a new CSV file.</li>
+  </ul>
 
-- Reads CSV files with athlete performance data.
-- Calculates average times for:
-  - 50m Freestyle
-  - 50m Best Stroke
-  - 100m Freestyle
-  - 100m Best Stroke
-- Calculates average metrics for:
-  - Crossfit Max Sets
-  - Max Pushups in 60 Seconds
-  - Run "Botke"
-  - Test 12
-- Outputs the calculated averages to a new CSV file.
+  <h2>Prerequisites</h2>
+  <ul>
+    <li>GCC (GNU Compiler Collection)</li>
+  </ul>
 
-## Prerequisites
+  <h2>Installation</h2>
+  <ol>
+    <li><strong>Clone the repository:</strong>
+      <pre><code>git clone https://github.com/YourUsername/csv_analyzer.git
+cd csv_analyzer</code></pre>
+    </li>
+    <li><strong>Compile and run the program:</strong>
+      <pre><code>gcc -o csv_analyzer csv_analyzer.c
+./csv_analyzer</code></pre>
+    </li>
+  </ol>
 
-- GCC (GNU Compiler Collection)
+  <h2>Usage</h2>
+  <ol>
+    <li><strong>Prepare your CSV file:</strong>
+      <ul>
+        <li>Ensure your CSV file follows the format expected by the program.</li>
+        <li>Modify the data as you need.</li>
+      </ul>
+    </li>
+    <li><strong>Run the program:</strong>
+      <pre><code>./csv_analyzer</code></pre>
+    </li>
+    <li><strong>Check the output:</strong>
+      <ul>
+        <li>The program will create a new CSV file named <code>output.csv</code> with the calculated averages.</li>
+      </ul>
+    </li>
+  </ol>
 
-## Installation
+  <h2>Support</h2>
+  <p>For support or inquiries, please contact <a href="mailto:markshperkin1@gmail.com">Mark Shperkin</a>.</p>
 
-1. **Clone the repository:**
-    ```sh
-    git clone https://github.com/YourUsername/csv_analyzer.git
-    cd csv_analyzer
-    ```
-
-2. **Compile and run the program:**
-    ```sh
-    gcc -o csv_analyzer csv_analyzer.c
-    ./csv_analyzer
-    ```
-
-## Usage
-
-1. **Prepare your CSV file:**
-   - Ensure your CSV file follows the format expected by the program.
-   - change 
-
-2. **Run the program:**
-    ```sh
-    ./csv_analyzer
-    ```
-
-3. **Check the output:**
-   - The program will create a new CSV file named `averages_output.csv` with the calculated averages.
-
-## Example
-
-Here is an example of how to use the program:
-
-1. **Input CSV (`data.csv`):**
-    ```csv
-    name of athlete,50 free,50 best stroke,100 free,100 best stroke,crosfit max sets in 10 min (3 pushups, 7 squats, 20 abs),max pushups in 60 sec,run "Botke",test 12
-    Ana 2009,0:33:00,00:46:00 breast,1:15,1:41:03 breast,12,9.5,3.5,550
-    Ariel 2010,0:37:00,00:47:00 fly,1:20:00,2:02:07 breast,12,10,,50
-    ...
-    ```
-
-2. **Run the program:**
-    ```sh
-    ./csv_analyzer
-    ```
-
-3. **Output CSV (`averages_output.csv`):**
-    ```csv
-    Event,Average
-    50 Free,00:45:12
-    50 Best Stroke,00:51:30
-    100 Free,01:35:45
-    100 Best Stroke,01:48:20
-    Crossfit Max Sets,10.50
-    Max Pushups in 60 Sec,8.25
-    Run "Botke",2.75
-    Test 12,450.00
-    ```
+</body>
+</html>
